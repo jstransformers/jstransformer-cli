@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+var cli = require('../');
+
+program
+  .version('0.0.1')
+  .arguments('<transformer> <file>')
+  .action(cli.out)
+  .parse(process.argv);
+
+if (!process.argv.slice(2).length) {
+  program.outputHelp();
+}
