@@ -4,10 +4,13 @@ var assert = require('assert');
 var fs = require('fs');
 var join = require('path').join;
 var test = require('testit');
+var childProcess = require('child_process');
 
 var cli = require('../');
 
-var expected = fs.readFileSync(join(__dirname, 'expected.txt')).toString();
+var inputFile = 'test/input.octet';
+var locals = fs.readFileSync(join(__dirname, 'locals.json')).toString().trim();
+var expected = fs.readFileSync(join(__dirname, 'expected.html')).toString().trim();
 
 function assertEqual(output, expected) {
   console.log('   Output:\t'   + JSON.stringify(output));
@@ -15,7 +18,21 @@ function assertEqual(output, expected) {
   assert.equal(output, expected);
 }
 
-test('should process input.txt properly.', function () {
-  var output = cli.renderFile('marked', 'test/input.txt');
-  assertEqual(output.trim(), expected.trim());
+test('bin/jstransformer octet ' + inputFile, function(done) {
+  var args = [
+    'octet',
+    inputFile,
+    "--locals=" + locals
+  ];
+  var result = childProcess.execFile('bin/jstransformer', args, function (err, stdout, stderr) {
+    if (err) {
+      done(err);
+    }
+    else {
+      assertEqual(stdout.toString(), expected);
+      done();
+    }
+  });
 });
+
+// TODO: Add a test for piping information.

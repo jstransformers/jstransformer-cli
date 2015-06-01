@@ -8,7 +8,7 @@
   },
   "files": [
     "index.js",
-    "bin"
+    "bin/jstransformer"
   ],
   "scripts": {
     "test": "node test"
@@ -27,11 +27,15 @@
   },
   "homepage": "https://github.com/jstransformers/jstransformer-cli",
   "dependencies": {
-    "commander": "^2.8.0",
+    "get-stdin": "^4.0.1",
     "jstransformer": "0.0.2",
-    "lazy-require": "^2.0.0"
+    "jstransformer-jstransformer": "^0.1.0",
+    "meow": "^3.1.0",
+    "merge": "^1.2.0"
   },
   "devDependencies": {
+    "jstransformer-markdown": "^1.0.1",
+    "jstransformer-octet": "0.0.1",
     "testit": "^2.0.2"
   }
 }

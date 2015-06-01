@@ -1,14 +1,43 @@
 #!/usr/bin/env node
 
-var program = require('commander');
+var meow = require('meow');
 var cli = require('../');
+var stdin = require('get-stdin');
+var merge = require('merge');
 
-program
-  .version('0.0.1')
-  .arguments('<transformer> <file>')
-  .action(cli.out)
-  .parse(process.argv);
+var program = meow({
+  help: [
+    '  jstransformer-cli <transform> <file>',
+    '  cat <file> | jstransformer-cli <transform>'
+  ].join('\n'),
+  pkg: '../package.json'
+});
 
-if (!process.argv.slice(2).length) {
-  program.outputHelp();
+var transformer = program.input.length >= 1 ? program.input[0] : null;
+var file = program.input.length >= 2 ? program.input[1] : null;
+var options = program.flags.options ? JSON.parse(program.flags.options) : {};
+var locals = program.flags.locals ? JSON.parse(program.flags.locals) : {};
+
+if (!transformer) {
+  program.showHelp();
+  process.exit(9); // Invalid argument.
+}
+else {
+  options = merge(options, {
+    jstransformer: transformer
+  });
+  if (file) {
+    process.stdout.write(cli.renderFile(file, options, locals));
+  }
+  else {
+    stdin(function (data) {
+      if (!data) {
+        program.showHelp();
+        process.exit(9); // Invalid argument.
+      }
+      else {
+        process.stdout.write(cli.render(data, options, locals));
+      }
+    });
+  }
 }
