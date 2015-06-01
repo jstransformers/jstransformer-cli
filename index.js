@@ -1,3 +1,5 @@
+'use strict'
+
 var transform = require('jstransformer-jstransformer');
 
 exports.name = 'cli';

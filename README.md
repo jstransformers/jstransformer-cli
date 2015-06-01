@@ -4,21 +4,30 @@ Command line interface for [JSTransformers](http://github.com/jstransformers/jst
 
 [![Build Status](https://img.shields.io/travis/jstransformers/jstransformer-cli/master.svg)](https://travis-ci.org/jstransformers/jstransformer-cli)
 [![Coverage Status](https://img.shields.io/coveralls/jstransformers/jstransformer-cli/master.svg)](https://coveralls.io/r/jstransformers/jstransformer-cli?branch=master)
+[![Dependency Status](https://img.shields.io/david/jstransformers/jstransformer-cli/master.svg)](http://david-dm.org/jstransformers/jstransformer-cli)
 [![NPM version](https://img.shields.io/npm/v/jstransformer-cli.svg)](https://www.npmjs.org/package/jstransformer-cli)
 
-## Install
+## Installation
 
     npm install -g jstransformer-cli
 
 ## Usage
 
-    jstransformer [options] <transformer> <file>
+    jstransformer <transformer> <file> [options]
+    cat <file> | jstransformer <transformer> [options]
 
     Options:
 
-      -h, --help     output usage information
-      -V, --version  output the version number
+      --version  output the version number
+      --locals   JSON string for locals
+      --options   JSON string for options
 
 ## Example
 
     jstransformer marked README.md > README.html
+
+    cat README.md | jstransformer marked > README.html
+
+## License
+
+MIT

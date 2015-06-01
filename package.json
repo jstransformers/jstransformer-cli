@@ -1,31 +1,17 @@
 {
   "name": "jstransformer-cli",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Command line interface for JSTransformers.",
-  "main": "index.js",
-  "bin": {
-    "jstransformer": "./bin/jstransformer"
-  },
+  "keywords": [
+    "jstransformer"
+  ],
   "files": [
     "index.js",
     "bin/jstransformer"
   ],
-  "scripts": {
-    "test": "node test"
+  "bin": {
+    "jstransformer": "./bin/jstransformer"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jstransformers/jstransformer-cli.git"
-  },
-  "keywords": [
-    "jstransformer"
-  ],
-  "author": "Rob Loach <robloach@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jstransformers/jstransformer-cli/issues"
-  },
-  "homepage": "https://github.com/jstransformers/jstransformer-cli",
   "dependencies": {
     "get-stdin": "^4.0.1",
     "jstransformer": "0.0.2",
@@ -34,8 +20,19 @@
     "merge": "^1.2.0"
   },
   "devDependencies": {
+    "test-jstransformer": "^1.0.0",
     "jstransformer-markdown": "^1.0.1",
     "jstransformer-octet": "0.0.1",
     "testit": "^2.0.2"
-  }
+  },
+  "scripts": {
+    "test": "node test",
+    "coverage": "test-jstransformer coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jstransformers/jstransformer-cli.git"
+  },
+  "author": "Rob Loach <robloach@gmail.com>",
+  "license": "MIT"
 }
