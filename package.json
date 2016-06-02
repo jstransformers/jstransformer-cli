@@ -14,10 +14,11 @@
   },
   "dependencies": {
     "get-stdin": "^4.0.1",
-    "jstransformer": "0.0.2",
+    "jstransformer": "0.0.4",
     "jstransformer-jstransformer": "^0.1.0",
     "meow": "^3.1.0",
-    "merge": "^1.2.0"
+    "merge": "^1.2.0",
+    "lazy-require": "^2.0.0"
   },
   "devDependencies": {
     "test-jstransformer": "^1.0.0",
@@ -34,5 +35,9 @@
     "url": "https://github.com/jstransformers/jstransformer-cli.git"
   },
   "author": "Rob Loach <robloach@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jstransformers/jstransformer-cli/issues"
+  },
+  "homepage": "https://github.com/jstransformers/jstransformer-cli"
 }
