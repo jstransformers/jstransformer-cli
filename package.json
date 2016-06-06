@@ -28,7 +28,7 @@
   "homepage": "https://github.com/jstransformers/jstransformer-cli",
   "dependencies": {
     "commander": "^2.8.0",
-    "jstransformer": "0.0.4",
+    "jstransformer": "1.0.0",
     "lazy-require": "^2.0.0"
   },
   "devDependencies": {
