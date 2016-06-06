@@ -19,15 +19,17 @@ var options = program.flags.options ? JSON.parse(program.flags.options) : {};
 var locals = program.flags.locals ? JSON.parse(program.flags.locals) : {};
 
 if (!transformer) {
+  // TODO: Discover the transformer from the file extension.
   program.showHelp();
   process.exit(9); // Invalid argument.
 }
 else {
   options = merge(options, {
-    jstransformer: transformer
+    engine: transformer
   });
   if (file) {
-    process.stdout.write(cli.renderFile(file, options, locals));
+    var out = cli.renderFile(file, options, locals);
+    process.stdout.write(out.body);
   }
   else {
     stdin(function (data) {
@@ -36,7 +38,8 @@ else {
         process.exit(9); // Invalid argument.
       }
       else {
-        process.stdout.write(cli.render(data, options, locals));
+        var out = cli.render(data, options, locals);
+        process.stdout.write(out.body);
       }
     });
   }

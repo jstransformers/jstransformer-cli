@@ -8,7 +8,7 @@ var childProcess = require('child_process');
 
 var cli = require('../');
 
-var inputFile = 'test/input.octet';
+var inputFile = 'test/input.twig';
 var locals = fs.readFileSync(join(__dirname, 'locals.json')).toString().trim();
 var expected = fs.readFileSync(join(__dirname, 'expected.html')).toString().trim();
 
@@ -18,9 +18,9 @@ function assertEqual(output, expected) {
   assert.equal(output, expected);
 }
 
-test('bin/jstransformer octet ' + inputFile, function(done) {
+test('bin/jstransformer twig ' + inputFile, function(done) {
   var args = [
-    'octet',
+    'twig',
     inputFile,
     "--locals=" + locals
   ];
@@ -29,7 +29,7 @@ test('bin/jstransformer octet ' + inputFile, function(done) {
       done(err);
     }
     else {
-      assertEqual(stdout.toString(), expected);
+      assertEqual(stdout.toString().trim(), expected);
       done();
     }
   });
