@@ -32,6 +32,6 @@
     "lazy-require": "^2.0.0"
   },
   "devDependencies": {
-    "testit": "^2.0.2"
+    "testit": "^2.1.1"
   }
 }
