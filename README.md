@@ -3,7 +3,7 @@
 Command line interface for [JSTransformers](http://github.com/jstransformers/jstransformer).
 
 [![Build Status](https://img.shields.io/travis/jstransformers/jstransformer-cli/master.svg)](https://travis-ci.org/jstransformers/jstransformer-cli)
-[![Coverage Status](https://img.shields.io/coveralls/jstransformers/jstransformer-cli/master.svg)](https://coveralls.io/r/jstransformers/jstransformer-cli?branch=master)
+[![Coverage Status](https://img.shields.io/codecov/c/github/jstransformers/jstransformer-cli/master.svg)](https://codecov.io/gh/jstransformers/jstransformer-cli)
 [![Dependency Status](https://img.shields.io/david/jstransformers/jstransformer-cli/master.svg)](http://david-dm.org/jstransformers/jstransformer-cli)
 [![NPM version](https://img.shields.io/npm/v/jstransformer-cli.svg)](https://www.npmjs.org/package/jstransformer-cli)
 
@@ -25,7 +25,6 @@ Command line interface for [JSTransformers](http://github.com/jstransformers/jst
 ## Example
 
     jstransformer marked README.md > README.html
-
     cat README.md | jstransformer marked > README.html
 
 ## License
