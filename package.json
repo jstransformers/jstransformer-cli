@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "jstransformer-markdown": "^1.0.1",
-    "jstransformer-twig": "^0.1.3",
+    "jstransformer-twig": "^1.2.0",
     "test-jstransformer": "^1.0.0",
     "testit": "^2.0.2"
   },
