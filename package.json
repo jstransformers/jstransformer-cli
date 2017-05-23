@@ -23,14 +23,16 @@
     "jstransformer-markdown": "^1.0.1",
     "jstransformer-twig": "^1.2.0",
     "test-jstransformer": "^1.0.0",
-    "testit": "^2.0.2"
+    "testit": "^2.0.2",
+    "xo": "^0.18.1"
   },
   "scripts": {
     "coverage": "test-jstransformer coverage",
-    "test": "node test"
+    "test": "node test",
+    "posttest": "xo --space --no-semicolon index.js"
   },
   "engines": {
-    "node": ">=0.10.36"
+    "node": ">=4"
   },
   "repository": {
     "type": "git",
