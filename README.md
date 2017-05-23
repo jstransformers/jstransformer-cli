@@ -1,5 +1,7 @@
 # jstransformer-cli
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jstransformers/jstransformer-cli.svg)](https://greenkeeper.io/)
+
 Command line interface for [JSTransformers](http://github.com/jstransformers/jstransformer).
 
 [![Build Status](https://img.shields.io/travis/jstransformers/jstransformer-cli/master.svg)](https://travis-ci.org/jstransformers/jstransformer-cli)
