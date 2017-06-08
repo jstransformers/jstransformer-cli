@@ -24,12 +24,12 @@
     "jstransformer-twig": "^1.2.0",
     "test-jstransformer": "^1.0.0",
     "testit": "^2.0.2",
-    "xo": "^0.18.1"
+    "xo": "*"
   },
   "scripts": {
     "coverage": "test-jstransformer coverage",
     "test": "node test",
-    "posttest": "xo --space --no-semicolon index.js"
+    "posttest": "xo --space --no-semicolon"
   },
   "engines": {
     "node": ">=4"
