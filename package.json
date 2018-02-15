@@ -29,7 +29,7 @@
   "scripts": {
     "coverage": "test-jstransformer coverage",
     "test": "node test",
-    "posttest": "xo --space --no-semicolon"
+    "posttest": "xo --space=2 --no-semicolon index.js"
   },
   "engines": {
     "node": ">=4"
