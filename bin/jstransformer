@@ -9,8 +9,7 @@ var program = meow({
   help: [
     '  jstransformer-cli <transform> <file>',
     '  cat <file> | jstransformer-cli <transform>'
-  ].join('\n'),
-  pkg: '../package.json'
+  ].join('\n')
 });
 
 var transformer = program.input.length >= 1 ? program.input[0] : null;
