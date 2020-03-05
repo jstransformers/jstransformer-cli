@@ -1,6 +1,6 @@
 {
   "name": "jstransformer-cli",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Command line interface for JSTransformers.",
   "keywords": [
     "jstransformer"
@@ -15,15 +15,15 @@
   "dependencies": {
     "get-stdin": "^7.0.0",
     "jstransformer": "1.0.0",
-    "jstransformer-jstransformer": "^1.1.2",
-    "meow": "^5.0.0",
-    "merge": "^1.2.0"
+    "jstransformer-jstransformer": "^1.1.6",
+    "meow": "^6.0.1",
+    "merge": "^1.2.1"
   },
   "devDependencies": {
-    "jstransformer-markdown": "^1.0.1",
-    "jstransformer-twig": "^1.2.0",
-    "test-jstransformer": "^1.0.0",
-    "testit": "^3.0.0",
+    "jstransformer-markdown": "^1.2.1",
+    "jstransformer-twig": "^1.6.2",
+    "test-jstransformer": "^1.0.3",
+    "testit": "^3.1.0",
     "xo": "*"
   },
   "scripts": {
