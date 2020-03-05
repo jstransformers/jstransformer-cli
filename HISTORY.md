@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.0: 2020-04-04
+
+- Updated dependencies
+
 ## v0.2.0: 2016-12-05
 
 - Adding pipe support
