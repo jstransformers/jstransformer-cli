@@ -16,7 +16,7 @@
     "get-stdin": "^7.0.0",
     "jstransformer": "1.0.0",
     "jstransformer-jstransformer": "^1.1.6",
-    "meow": "^6.0.1",
+    "meow": "^10.0.0",
     "merge": "^1.2.1"
   },
   "devDependencies": {
